@@ -5,11 +5,11 @@ This repository contains an end-to-end example of fetching real-time crypto trad
 ---
 ```mermaid
 graph LR
-    A["CCXT Script(Python)"] --> B["Kafka Producer(Python, etc.)"]
+    A["CCXT Script(Python)"] --> B["Kafka Producer(Python)"]
     B --> C["Kafka Broker(s)(Cluster)"]
     C --> D["Kafka Consumer(Sink to DB)"]
-    D --> E["Data Store(e.g. InfluxDB, Elasticsearch, PostgreSQL, etc.)"]
-    E --> F["Visualization(Grafana, Kibana, etc.)"]
+    D --> E["Data Store(InfluxDB)"]
+    E --> F["Visualization(Grafana)"]
     C --> Z["Zookeeper(Cluster)"]
 ```
 ---
